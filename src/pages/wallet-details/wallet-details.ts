@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Events, NavController, NavParams } from 'ionic-angular';
+import { ModalController, Events, NavController, NavParams } from 'ionic-angular';
 import { Logger } from '../../providers/logger/logger';
 
 // providers
@@ -16,6 +16,7 @@ import { BackupWarningPage } from '../../pages/backup/backup-warning/backup-warn
 import { WalletAddressesPage } from '../../pages/settings/wallet-settings/wallet-settings-advanced/wallet-addresses/wallet-addresses';
 import { TxDetailsPage } from '../../pages/tx-details/tx-details';
 import { WalletBalancePage } from './wallet-balance/wallet-balance';
+import { WalletAllAddressQRPage } from '../wallet-details/wallet-all-address-qr/wallet-all-address-qr';
 
 import * as _ from 'lodash';
 
@@ -52,6 +53,7 @@ export class WalletDetailsPage {
     private bwcError: BwcErrorProvider,
     private events: Events,
     private logger: Logger,
+    private modalCtrl: ModalController,
     private timeProvider: TimeProvider,
     private translate: TranslateService,
     private onGoingProcessProvider: OnGoingProcessProvider
@@ -164,6 +166,13 @@ export class WalletDetailsPage {
 
   public toggleBalance() {
     this.profileProvider.toggleHideBalanceFlag(this.wallet.credentials.walletId);
+  }
+
+  public refreshBalance() {
+    let modal = this.modalCtrl.create(WalletAllAddressQRPage, { 
+      wallet: this.wallet
+    });
+    modal.present();
   }
 
   public loadHistory(loading) {

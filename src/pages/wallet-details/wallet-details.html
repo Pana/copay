@@ -69,6 +69,8 @@
 
   </div>
 
+  <button ion-item (click)="refreshBalance()">Reresh Balance</button>
+
   <div *ngIf="wallet.needsBackup" class="box-notification no-margin warn">
     <a (click)="openBackup()">
       <ion-icon name="warning"></ion-icon>

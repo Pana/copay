@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All addresses QR</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        {{'Close' | translate}}
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+  <div>hello world</div>
+  <ngx-qrcode *ngIf="allAddress" qrc-value="{{allAddress}}" qrc-class="aclass" qrc-errorCorrectionLevel="M"></ngx-qrcode>
+</ion-content>
+  
+  

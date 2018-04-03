@@ -56,6 +56,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TxDetailsPage } from '../pages/tx-details/tx-details';
 import { TxpDetailsPage } from '../pages/txp-details/txp-details';
 import { WalletBalancePage } from '../pages/wallet-details/wallet-balance/wallet-balance';
+import { WalletAllAddressQRPage } from '../pages/wallet-details/wallet-all-address-qr/wallet-all-address-qr';
 import { WalletDetailsPage } from '../pages/wallet-details/wallet-details';
 
 // Integrations: Amazon
@@ -317,6 +318,7 @@ export function createTranslateLoader(http: HttpClient) {
     WalletDeletePage,
     WalletExtendedPrivateKeyPage,
     WalletDetailsPage,
+    WalletAllAddressQRPage,
     WalletBalancePage,
     WalletItemPage,
     WalletActivityPage,
@@ -451,6 +453,7 @@ export function createTranslateLoader(http: HttpClient) {
     WalletTransactionHistoryPage,
     WalletDeletePage,
     WalletExtendedPrivateKeyPage,
+    WalletAllAddressQRPage,
     WalletDetailsPage,
     WalletBalancePage,
     WalletItemPage,
