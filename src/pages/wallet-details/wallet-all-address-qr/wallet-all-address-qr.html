@@ -10,7 +10,7 @@
 </ion-header>
   
 <ion-content>
-  <div>hello world</div>
+  <div *ngIf="!allAddress">Loading</div>
   <ngx-qrcode *ngIf="allAddress" qrc-value="{{allAddress}}" qrc-class="aclass" qrc-errorCorrectionLevel="M"></ngx-qrcode>
 </ion-content>
   

@@ -27,7 +27,6 @@ export class WalletAllAddressQRPage {
   ionViewWillEnter() {
     this.walletProvider.getMainAddresses(this.wallet, {}).then((addresses: any) => {
       this.allAddress = addresses.map(i => i.address).join(',');
-      this.logger.info("hello", this.allAddress);
     });
   }
 
