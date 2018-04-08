@@ -36,9 +36,5 @@ This project is forked from copay which is an open source bitcoin wallet project
 * Multiple languages supported
 * Available for iOS, Android, Windows Phone, Chrome App, Linux, Windows and OS X devices
 
-
-
-
-
-
-
+#### Current Progress
+This project is in an very early stage, we are trying to split copay into two parts, now mainly the offline part. 
